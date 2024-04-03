@@ -1,3 +1,5 @@
+import Board from "./components/ttt/Board";
+
 function App() {
   return (
     <>
@@ -5,8 +7,9 @@ function App() {
         Richard Y. Hayashi
       </h1>
       <h2 className="text-2xl text-center"> Portfolio</h2>
+      <Board />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
