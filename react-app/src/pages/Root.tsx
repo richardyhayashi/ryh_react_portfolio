@@ -1,9 +1,6 @@
-import Navbar from "../components/Navbar";
-
 const Root = () => {
   return (
     <>
-      <Navbar />
       <h1 className=" text-3xl text-center font-bold underline">
         Richard Y. Hayashi
       </h1>
