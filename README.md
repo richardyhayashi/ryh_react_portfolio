@@ -9,3 +9,11 @@
 ### npm
 
 `$ npm create vite@latest {.|<project-name>} -- --template react-ts`
+
+## Install Tailwindcss
+
+`$ npm install -D tailwindcss postcss autoprefixer`
+
+`$ npx tailwindcss init -p`
+
+Note: See website for further instructions.
