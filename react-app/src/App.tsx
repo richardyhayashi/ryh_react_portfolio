@@ -1,4 +1,4 @@
-import Board from "./components/ttt/Board";
+import Game from "./components/ttt/Game";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
         Richard Y. Hayashi
       </h1>
       <h2 className="text-2xl text-center"> Portfolio</h2>
-      <Board />
+      <Game />
     </>
   );
 }

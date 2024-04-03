@@ -1,5 +1,9 @@
 # Richard Y. Hayashi React Portfolio
 
+## Run
+
+`$ yarn dev`
+
 ## Create React App (Vite)
 
 ### yarn
