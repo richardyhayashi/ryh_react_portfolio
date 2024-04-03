@@ -16,8 +16,26 @@
 
 ## Install Tailwindcss
 
+### yarn
+
+`$ yarn add -D tailwindcss postcss autoprefixer`
+
+### npm
+
 `$ npm install -D tailwindcss postcss autoprefixer`
 
-`$ npx tailwindcss init -p`
+### Initialize
 
+`$ npx tailwindcss init -p`
+<br>
 Note: See website for further instructions.
+
+## Install React Router
+
+### yarn
+
+`$ yarn add react-router-dom`
+
+### npm
+
+`$ npm i react-router-dom`
