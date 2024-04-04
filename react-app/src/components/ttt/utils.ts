@@ -25,4 +25,13 @@ const calculateWinner = (squares: (string|null)[]): string|null => {
   return null;
 }
 
-export { calculateWinner };
+/**
+ * 
+ * @param squares 
+ * @returns 
+ */
+const isFull = (squares: (string|null)[]):boolean => {
+  return !squares.includes(null);
+}
+
+export { calculateWinner, isFull };

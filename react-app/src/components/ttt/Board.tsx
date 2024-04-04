@@ -1,15 +1,11 @@
 import Square from "./Square";
-import { calculateWinner } from "./utils";
+import { calculateWinner, isFull } from "./utils";
 
 type BoardProps = {
   xIsNext: boolean,
   squares: (string|null)[],
   onPlay: (nextSquares: (string|null)[]) => void,
   onGameEnd: () => void,
-}
-
-const isFull = (squares: (string|null)[]):boolean => {
-  return !squares.includes(null);
 }
 
 const Board = ({ xIsNext, squares, onPlay, onGameEnd}: BoardProps) => {
