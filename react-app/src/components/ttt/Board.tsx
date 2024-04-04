@@ -4,16 +4,25 @@ import { calculateWinner } from "./utils";
 type BoardProps = {
   xIsNext: boolean,
   squares: (string|null)[],
-  onPlay: (nextSquares: (string|null)[]) => void
+  onPlay: (nextSquares: (string|null)[]) => void,
+  onGameEnd: () => void,
 }
 
-const Board = ({ xIsNext, squares, onPlay }: BoardProps) => {
+const isFull = (squares: (string|null)[]):boolean => {
+  return !squares.includes(null);
+}
+
+const Board = ({ xIsNext, squares, onPlay, onGameEnd}: BoardProps) => {
   const handleClick = (i: number) => {
         if (squares[i] || calculateWinner(squares)) return;
 
         const nextSquares = squares.slice();
         nextSquares[i] = xIsNext ? 'X' : 'O';
         onPlay(nextSquares);
+        
+        if (calculateWinner(nextSquares) || isFull(nextSquares)) {
+          onGameEnd();
+        }
   }
 
   const winner = calculateWinner(squares);
