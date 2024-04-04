@@ -1,14 +1,19 @@
 .square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-  }
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10rem;
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 9rem;
+  font-weight: bold;
+  width: 10rem;
+  height: 10rem;
+  /*
+  float: left;*/
+  /*height: 34px;*/
+  /*width: 34px;*/
+  /*
+  margin-right: -1px;
+  margin-top: -1px;*/
+}
