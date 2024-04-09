@@ -7,8 +7,8 @@ import {
 import Layout from './pages/Layout.tsx';
 import Root from './pages/Root.tsx';
 import TicTacToePage from './pages/TicTacToePage.tsx';
+import TestPage from './pages/TestPage.tsx';
 import './index.css'
-import ContactPage from './pages/ContactPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
         element: <TicTacToePage />
       },
       {
-        path: "/contact",
-        element: <ContactPage />
+        path: "/tests",
+        element: <TestPage />
       }
     ]
   }
