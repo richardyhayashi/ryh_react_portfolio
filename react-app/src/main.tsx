@@ -8,6 +8,7 @@ import Layout from './pages/Layout.tsx';
 import Root from './pages/Root.tsx';
 import TicTacToePage from './pages/TicTacToePage.tsx';
 import TestPage from './pages/TestPage.tsx';
+import ReactHooks from './pages/ReactHooks.tsx';
 import './index.css'
 
 const router = createBrowserRouter([
@@ -20,11 +21,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/tic-tac-toe",
-        element: <TicTacToePage />
+        element: <TicTacToePage />,
       },
       {
         path: "/tests",
-        element: <TestPage />
+        element: <TestPage />,
+      },
+      {
+        path: "/reacthooks",
+        element: <ReactHooks />,
       }
     ]
   }

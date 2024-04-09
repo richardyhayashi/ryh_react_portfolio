@@ -39,3 +39,9 @@ Note: See website for further instructions.
 ### npm
 
 `$ npm i react-router-dom`
+
+## Redux
+
+`$ yarn add redux`
+`$ npm i redux`
+
