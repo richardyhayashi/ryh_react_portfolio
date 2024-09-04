@@ -1,0 +1,39 @@
+services:
+  nginx:
+    image: nginx:1.27.0-alpine
+    container_name: ${NGINX_CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - ${NGINX_PORT_OUT}:${NGINX_PORT}
+      - ${NGINX_SSL_OUT}:${NGINX_SSL}
+    volumes:
+      - ./etc/nginx/conf.d:/etc/nginx/conf.d:ro
+      # Default directory.
+      #- :/usr/share/nginx/html
+    #env_file:
+    #  - ./.env
+
+  react-app:
+    image: ${REACT_IMAGE_NAME}
+    container_name: ${REACT_CONTAINER_NAME}
+    build:
+      dockerfile: Dockerfile.dev
+      args:
+        REACT_APP_NAME: ${PROJECT_NAME}
+        REACT_PORT: ${REACT_PORT}
+    #command: sh -c ""
+    restart: unless-stopped
+    ports:
+      - ${REACT_PORT_OUT}:${REACT_PORT}
+    volumes:
+      - ./src:/app
+      - node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+    #env_file:
+    #  - ./.env
+    depends_on:
+      - nginx
+
+volumes:
+  node_modules:

@@ -45,3 +45,14 @@ Note: See website for further instructions.
 `$ yarn add redux`
 `$ npm i redux`
 
+
+
+## Notes
+
+### Development
+
+1. In `.env` comment `COMPOSE_FILE=...` for 'production', uncomment `COMPOSE_FILE=...` for 'developement'
+
+### Production
+
+1. In `.env` uncomment `COMPOSE_FILE=...` for 'production', comment `COMPOSE_FILE=...` for 'developement'
